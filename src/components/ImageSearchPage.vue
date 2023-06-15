@@ -54,7 +54,7 @@ export default class RoverPictures extends Vue {
     private searchError: Error | null = null;
 
     private get apiKey(): string {
-        return 'HGKNqjYNMmSQAq4wIME57c4HAdio4MEKEuxlCSYR';
+        return process.env.VUE_APP_API_KEY;
     }
 
     private handleSearchResults(response: { photos: Image[] }): void {
